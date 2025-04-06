@@ -1,0 +1,40 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*.local
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# OS-specific files
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
+# IDE/Editor folders
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Build directories
+build/
+tmp/
+out/
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# Testing directories
+coverage/
+test-results/

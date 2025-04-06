@@ -1,0 +1,38 @@
+{
+  "name": "char-avatar-generator",
+  "version": "0.0.1",
+  "description": "A simple server to generate images using canvas",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node index.ts",
+    "dev:watch": "nodemon",
+    "clean": "rm -rf dist",
+    "lint": "yarn eslint --ext .ts ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "eslint": "^9.24.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.0"
+  },
+  "dependencies": {
+    "canvas": "^3.1.0",
+    "dotenv": "^16.4.7",
+    "envalid": "^8.0.0",
+    "express": "^5.1.0"
+  },
+  "nodemonConfig": {
+    "ext": ".ts",
+    "exec": "yarn dev"
+  },
+  "packageManager": "yarn@4.8.1",
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
