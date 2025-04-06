@@ -14,10 +14,7 @@ RUN apt-get update && apt-get install -y \
   librsvg2-dev \
   && rm -rf /var/lib/apt/lists/*
 
-COPY package.json yarn.lock .yarnrc.yml .pnp.* ./
-COPY .yarn/ .yarn/
-COPY src/ ./src/
-COPY tsconfig.json ./
+COPY . .
 
 RUN yarn install --immutable
 

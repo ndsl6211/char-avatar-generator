@@ -73,7 +73,21 @@ app.get('/avatar', (req: Request, res: Response) => {
   canvas.createPNGStream().pipe(res);
 });
 
-app.listen(env.PORT, () => {
+const server = app.listen(env.PORT, () => {
   console.log(`Server is running on http://localhost:${env.PORT}`);
 });
 
+// Graceful shutdown
+process.on('SIGTERM', () => {
+  console.log('SIGTERM signal received: closing HTTP server...');
+  server.close(() => {
+    console.log('HTTP server closed.');
+  });
+});
+
+process.on('SIGINT', () => {
+  console.log('SIGINT signal received: closing HTTP server...');
+  server.close(() => {
+    console.log('HTTP server closed.');
+  });
+});
