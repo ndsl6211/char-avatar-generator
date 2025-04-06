@@ -73,6 +73,7 @@ jobs:
   update-manifest:
     runs-on: ubuntu-latest
     needs:
+      - metadata
       - build-docker-image
     steps:
       - name: Checkout
